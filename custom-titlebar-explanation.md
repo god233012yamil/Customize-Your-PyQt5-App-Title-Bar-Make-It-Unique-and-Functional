@@ -6,7 +6,7 @@ This document provides a comprehensive explanation of the custom PyQt5 title bar
 
 1. [Import Statements](#import-statements)
 2. [CustomTitleBar Class](#customtitlebar-class)
-3. [MyMainWindow Class](#mymainwindow-class)
+3. [MainWindow Class](#mainwindow-class)
 4. [Main Execution](#main-execution)
 
 ## Import Statements
@@ -64,14 +64,14 @@ These methods control the window state:
 - `showParentMaximized()`: Toggles between maximized and normal window states.
 - `showParentFullScreen()`: Toggles between fullscreen and normal window states.
 
-## MyMainWindow Class
+## MainWindow Class
 
-The `MyMainWindow` class is a custom `QMainWindow` that uses the `CustomTitleBar` and implements resizable edges.
+The `MainWindow` class is a custom `QMainWindow` that uses the `CustomTitleBar` and implements resizable edges.
 
 ### Initialization
 
 ```python
-class MyMainWindow(QMainWindow):
+class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         # ... (initialization code)
@@ -98,7 +98,7 @@ The class includes methods to handle mouse events for resizing the window:
 ```python
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    main_window = MyMainWindow()
+    main_window = MainWindow()
     main_window.show()
     sys.exit(app.exec())
 ```
