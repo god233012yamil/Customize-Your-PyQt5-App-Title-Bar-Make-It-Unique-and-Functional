@@ -37,7 +37,7 @@ python custom_titlebar.py
 
 To use the custom title bar in your own PyQt5 application:
 
-1. Copy the `CustomTitleBar` and `MyMainWindow` classes from `custom_titlebar.py` into your project.
+1. Copy the `CustomTitleBar` and `MainWindow` classes from `custom_titlebar.py` into your project.
 2. Customize the title bar appearance and functionality as needed.
 
 Example:
@@ -47,7 +47,7 @@ from custom_titlebar import MyMainWindow
 from PyQt5.QtWidgets import QApplication
 import sys
 
-class MyApplication(MyMainWindow):
+class MyApplication(MainWindow):
     def __init__(self):
         super().__init__()
         # Add your application-specific setup here
